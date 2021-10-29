@@ -14,7 +14,7 @@ python PDD.py
 ```bash
 python run.py
 ```
-* For easier verification, we set K=2, M=2, N=4, M_RF=2, N_RF = 4, D_in = 4, D_out = 2 here. And we can achieve PDD's result(16.177bps/Hz) and DLDUNN's result(15.891bps/Hz). These parameters can be manually changed to match the paper.
+* For easier verification, we set K=2, M=2, N=4, M_RF=2, N_RF = 4, D_in = 4, D_out = 2 here. And we can achieve PDD's result(16.177bps/Hz) and DLDUNN's result(15.891bps/Hz, after ~15 epochs). These parameters can be manually changed to match the paper.
 
 ## Cite
 ```
@@ -23,8 +23,6 @@ python run.py
   booktitle={2021 IEEE 32nd Annual International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC)}, 
   title={Hybrid Precoding Design Based on Dual-Layer Deep-Unfolding Neural Network}, 
   year={2021},
-  volume={},
-  number={},
   pages={678-683},
   doi={10.1109/PIMRC50174.2021.9569633}}
 ```
