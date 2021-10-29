@@ -12,8 +12,8 @@ if __name__ == "__main__":
     N_RF = 4
     P = 100
     sigma = 1
-    num_in = 4
-    num_out = 2
+    D_in = 4
+    D_out = 2
     learning_rate = 0.001
     temp = torch.randn((N,N_RF))
     V_RF = torch.zeros(2,N,N_RF)
@@ -39,6 +39,6 @@ if __name__ == "__main__":
     U_BB = torch.randn(K,2,N_RF,d)
     U_BB = U_BB.to(dtype=dtype,device=device)
     Y = torch.randn(K,2,N,d)
-    DLDUNN = model(K,d,M,N,N_RF,M_RF,P,sigma,num_in,num_out,device)
+    DLDUNN = model(K,d,M,N,N_RF,M_RF,P,sigma,D_in,D_out,device)
     optimizer = torch.optim.Adam(DLDUNN.parameters(), lr=learning_rate)
     train(DLDUNN, optimizer,U_BB,U_RF,V_BB,V_RF,W,X,Y,K,M,N,M_RF,sigma,epochs=10000)
