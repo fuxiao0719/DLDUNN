@@ -12,8 +12,8 @@ if __name__ == "__main__":
     N_RF = 4
     P = 100
     sigma = 1
-    D_in = 4
-    D_out = 2
+    D_in = 10
+    D_out = 7
     learning_rate = 0.001
     temp = torch.randn((N,N_RF))
     V_RF = torch.zeros(2,N,N_RF)

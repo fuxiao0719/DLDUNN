@@ -6,15 +6,15 @@ This repository contains the code for [Hybrid Precoding Design Based on Dual-Lay
 * PyTorch >= 1.1.0
 
 ## Usage
-* Run the PDD algorithm(complex Gaussian MIMO channel)
+* Run the  penalty dual decomposition (PDD) algorithm on complex Gaussian MIMO channel
 ```bash
 python PDD.py
 ```
-* Run the DLDUNN
+* Run the DLDUNN model
 ```bash
 python run.py
 ```
-* For easier verification, we set K=2, M=2, N=4, M_RF=2, N_RF = 4, D_in = 4, D_out = 2 here. And we can achieve PDD's result(16.177bps/Hz) and DLDUNN's result(15.891bps/Hz, after ~15 epochs). These parameters can be manually changed to match the paper.
+* For easier verification, we set K=2, M=2, N=4, M_RF=2, N_RF=4 here. And we can achieve PDD's result(16.125bps/Hz) and DLDUNN's result(15.901bps/Hz, ~98.6\%). These parameters can be manually changed to match the paper.
 
 ## Cite
 ```
