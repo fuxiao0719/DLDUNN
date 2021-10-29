@@ -136,7 +136,7 @@ if __name__=="__main__":
     max_iteration = 500 
     number = 0
     spectral_efficiency = []
-    average_number = 20
+    average_number = 100
     while number < average_number:
         rho = 100/N
         eta = 1e-3
