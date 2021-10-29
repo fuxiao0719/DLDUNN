@@ -6,7 +6,6 @@ This repository contains the code for [Hybrid Precoding Design Based on Dual-Lay
 * PyTorch >= 1.1.0
 
 ## Usage
-We include the MNIST attack experiment here.
 * Run the PDD algorithm(complex Gaussian MIMO channel)
 ```bash
 python PDD.py
@@ -15,6 +14,7 @@ python PDD.py
 ```bash
 python run.py
 ```
+* For easier verification, we set K=2, M=2, N=4, M_RF=2, N_RF = 4, D_in = 4, D_out = 2 here. And we can achieve PDD's result(16.177bps/Hz) and DLDUNN's result(15.891bps/Hz). These parameters can be changed to match the paper.
 
 ## Cite
 ```
