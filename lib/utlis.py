@@ -1,6 +1,6 @@
 import torch
-from model import * 
-from complex_matrix import *
+from lib.model import * 
+from lib.complex_matrix import *
 import os
 
 USE_GPU = False

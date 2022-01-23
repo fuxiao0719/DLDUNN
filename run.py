@@ -1,19 +1,20 @@
 import torch
-from model import * 
-from complex_matrix import *
-from utlis import *
+from lib.config import cfg, args
+from lib.model import * 
+from lib.complex_matrix import *
+from lib.utlis import *
 
 if __name__ == "__main__":
-    K = 2
+    K = cfg.K
     d = 2
-    M = 2
-    N = 4
-    M_RF = 2
-    N_RF = 4
-    P = 100
-    sigma = 1
-    D_in = 10
-    D_out = 7
+    M = cfg.M
+    N = cfg.N
+    M_RF = d
+    N_RF = cfg.N_RF
+    P = cfg.power
+    sigma = cfg.sigma
+    D_in = cfg.lay_in
+    D_out = cfg.lay_out
     learning_rate = 0.001
     temp = torch.randn((N,N_RF))
     V_RF = torch.zeros(2,N,N_RF)

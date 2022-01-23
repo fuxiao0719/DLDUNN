@@ -1,0 +1,17 @@
+task: dldunn
+gpus: [0, 1, 2, 3, 4, 5]
+
+####
+K : 2
+M : 2
+N : 4
+N_RF : 4
+sigma : 1
+epsilon : 1e-5
+eta : 1e-3
+max_iteration : 500
+average_number : 100
+power : 100
+lay_in : 10
+lay_out : 7
+####

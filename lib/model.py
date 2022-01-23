@@ -1,7 +1,7 @@
 import torch
 import numpy as np 
 import torch.nn as nn
-from complex_matrix import *
+from lib.complex_matrix import *
 
 # the whole model
 class model(nn.Module):

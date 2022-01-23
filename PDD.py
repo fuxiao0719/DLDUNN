@@ -1,3 +1,4 @@
+from lib.config import cfg, args
 import numpy as np
 import random
 from numpy.linalg import eigh
@@ -124,24 +125,23 @@ def target(U_RF, H, V_RF, V_BB, d, upsilon, P, K):
 
 if __name__=="__main__":
     # initialize scaler
-    K = 2
+    K = cfg.K
     d = 2
-    M = 2
-    N = 4
-    M_RF = 2
-    N_RF = 4
+    M = cfg.M
+    N = cfg.N
+    M_RF = d
+    N_RF = cfg.N_RF
     c = 0.8
-    sigma = 1
+    sigma = cfg.sigma
     P = pow(10,2)
-    max_iteration = 500 
+    max_iteration = cfg.max_iteration
     number = 0
     spectral_efficiency = []
-    average_number = 100
+    average_number = cfg.average_number
     while number < average_number:
         rho = 100/N
         eta = 1e-3
         epsilon = 1e-5
-
         # initialize Matrix
         V_RF = np.random.randn(N,N_RF)
         V_RF = np.sin(V_RF)+1j*np.cos(V_RF)
