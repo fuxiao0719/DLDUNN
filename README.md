@@ -1,6 +1,9 @@
 # DLDUNN
 This repository contains the code for [Hybrid Precoding Design Based on Dual-Layer Deep-Unfolding Neural Network](https://ieeexplore.ieee.org/document/9569633) (IEEE PIMRC 2021). Slides can be seen [here](https://fuxiao0719.github.io/assets/pdf/pimrc_dldunn.pdf).
 
+## Pipeline
+<img src="pimrc2021.jpg" width = "100%"/>
+
 ## Requirements
 * Python >= 3.6
 * PyTorch >= 1.1.0
@@ -8,7 +11,7 @@ This repository contains the code for [Hybrid Precoding Design Based on Dual-Lay
 ## Usage
 * Run the  penalty dual decomposition (PDD) algorithm on complex Gaussian MIMO channel
 ```bash
-python PDD.py --cfg_file lib/dldunn.yaml K 3 M 2 N 4 N_RF 4
+python pdd.py --cfg_file lib/dldunn.yaml K 3 M 2 N 4 N_RF 4
 ```
 * Run the DLDUNN model
 ```bash
