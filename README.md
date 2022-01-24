@@ -11,12 +11,13 @@ This repository contains the code for [Hybrid Precoding Design Based on Dual-Lay
 ## Usage
 * Run the  penalty dual decomposition (PDD) algorithm on complex Gaussian MIMO channel
 ```bash
-python pdd.py --cfg_file lib/dldunn.yaml K 2 M 4 M_RF 2 N 24 N_RF 8
+python pdd.py --cfg_file lib/dldunn.yaml K 2 M 2 N 4 M_RF 2 N_RF 4
 ```
 * Run the DLDUNN model
 ```bash
-python run.py --cfg_file lib/dldunn.yaml K 2 M 4 M_RF 2 N 24 N_RF 8 D_in 10 D_out 7
+python run.py --cfg_file lib/dldunn.yaml K 2 M 2 N 4 M_RF 2 N_RF 4 D_in 4 D_out 2
 ```
+* For easier verification, if we set K=2, M=2, N=4, M_RF=2, N_RF=4, D_in=4, D_out=2 here, we can achieve PDD's result(16.177bps/Hz) and DLDUNN's result(15.891bps/Hz). These parameters can be manually changed to match the paper.
 
 ## Cite
 ```
