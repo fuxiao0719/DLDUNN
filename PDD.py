@@ -124,13 +124,13 @@ def target(U_RF, H, V_RF, V_BB, d, upsilon, P, K):
     return target
 
 if __name__=="__main__":
-    # initialize scaler
     K = cfg.K
-    d = 2
+    d = cfg.d
     M = cfg.M
     N = cfg.N
-    M_RF = d
+    M_RF = cfg.M_RF
     N_RF = cfg.N_RF
+    print('K:{0},d:{1},M:{2},N:{3},M_RF:{4},N_RF:{5}'.format(K,d,M,N,M_RF,N_RF))
     c = 0.8
     sigma = cfg.sigma
     P = pow(10,2)

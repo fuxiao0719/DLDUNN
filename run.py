@@ -6,15 +6,16 @@ from lib.utlis import *
 
 if __name__ == "__main__":
     K = cfg.K
-    d = 2
+    d = cfg.d
     M = cfg.M
     N = cfg.N
-    M_RF = d
+    M_RF = cfg.M_RF
     N_RF = cfg.N_RF
+    print('K:{0},d:{1},M:{2},N:{3},M_RF:{4},N_RF:{5}'.format(K,d,M,N,M_RF,N_RF))
     P = cfg.power
     sigma = cfg.sigma
-    D_in = cfg.lay_in
-    D_out = cfg.lay_out
+    D_in = cfg.D_in
+    D_out = cfg.D_out
     learning_rate = 0.001
     temp = torch.randn((N,N_RF))
     V_RF = torch.zeros(2,N,N_RF)

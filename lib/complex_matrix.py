@@ -40,8 +40,12 @@ def cpinv(A):
     return cmul(cinv(cmul(conjT(A), A)), conjT(A))
 
 def cinv(A):
-    Cre = torch.inverse(A[0,:]+torch.mm(A[1,:],torch.mm(torch.inverse(A[0,:]),A[1,:])))
-    Cim = -torch.mm(torch.mm(torch.inverse(A[0,:]),A[1,:]),Cre)
+    try:
+        Cre = torch.inverse(A[0,:]+torch.mm(A[1,:],torch.mm(torch.inverse(A[0,:]),A[1,:])))
+        Cim = -torch.mm(torch.mm(torch.inverse(A[0,:]),A[1,:]),Cre)
+    except:
+        Cre = torch.pinverse(A[0,:]+torch.mm(A[1,:],torch.mm(torch.pinverse(A[0,:]),A[1,:])))
+        Cim = -torch.mm(torch.mm(torch.pinverse(A[0,:]),A[1,:]),Cre)
     return torch.cat((Cre.unsqueeze(0), Cim.unsqueeze(0)), 0)
 
 def cdiag(a):

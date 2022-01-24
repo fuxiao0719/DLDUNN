@@ -11,7 +11,6 @@ if USE_GPU == False:
 else:
     device = torch.device('cuda:0')
 print('using device:', device)
-print_every = 1
 
 def update_upsilon(U_RF, H,V_RF, V_BB, sigma, M, M_RF, K):
     upsilon_temp = torch.zeros((K,2,M_RF,M_RF))
