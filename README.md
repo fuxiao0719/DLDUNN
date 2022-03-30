@@ -1,4 +1,4 @@
-# Hybrid Precoding Design Based on Dual-Layer Deep-Unfolding Neural Network
+# DLDUNN
 This repository contains the code for [Hybrid Precoding Design Based on Dual-Layer Deep-Unfolding Neural Network](https://ieeexplore.ieee.org/document/9569633) (IEEE PIMRC 2021). Slides can be seen [here](https://fuxiao0719.github.io/assets/pdf/pimrc_dldunn.pdf).
 
 ## Pipeline
