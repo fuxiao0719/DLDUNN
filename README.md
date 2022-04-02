@@ -29,7 +29,7 @@ python run.py --cfg_file lib/dldunn.yaml K 2 M 2 N 4 M_RF 2 N_RF 4 D_in 4 D_out 
 
 * Initialization will affect the convergence of the model, try to re-initialize the model when the network suffers in the first few epochs (though the long-term training will get the network out of the local minimal region generally).
 
-* For generalization property, save the model parameters trained with a large user number (K) and directly load it for the small-scale scenario. 
+* For generalization property, save the model parameters trained with a large user number (K) and directly apply it for the small-scale scenario. 
 ```
 torch.save(DLDUNN.state_dict(),PATH)
 model_dict = DLDUNN.load_state_dict(torch.load(PATH))
