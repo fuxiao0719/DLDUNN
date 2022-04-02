@@ -8,12 +8,21 @@ This repository contains the code for [Hybrid Precoding Design Based on Dual-Lay
 * Python >= 3.6
 * PyTorch >= 1.1.0
 
+## File Introduction
+`run.py`: Main program that implements the training and testing stages; 
+
+`model.py`: The detailed design of Dual-Layer Deep-Unfolding Neural Network (DLDUNN).
+
+`complex_matrix.py`: Replace complex matrix operations with differentiable tensor operations that splits real and imaginary parts into two dimensions.
+
+`pdd.py`: The implementation of the penalty dual decomposition (PDD) algorithm.
+
 ## Usage
-* Run the  penalty dual decomposition (PDD) algorithm on complex Gaussian MIMO channel
+* Run the  penalty dual decomposition (PDD) algorithm on complex Gaussian MIMO channel.
 ```bash
 python pdd.py --cfg_file lib/dldunn.yaml K 2 M 2 N 4 M_RF 2 N_RF 4
 ```
-* Run the DLDUNN model. For easier verification, if we set K=2, M=2, N=4, M_RF=2, N_RF=4, D_in=4, D_out=2 here, we can achieve PDD's result (15.935bps/Hz) and DLDUNN's result (15.891bps/Hz). These parameters can be manually changed to match the paper.
+* Run the DLDUNN model. For easier verification, if we set K=2, M=2, N=4, M_RF=2, N_RF=4, D_in=4, D_out=2 here, we can achieve PDD's result (15.935bps/Hz) and DLDUNN's result (15.891bps/Hz). These parameters can be manually changed to match the paper. Initialization will affect the convergence of the model, try to re-initialize the model when the network falls into local optimal region.
 ```bash
 python run.py --cfg_file lib/dldunn.yaml K 2 M 2 N 4 M_RF 2 N_RF 4 D_in 4 D_out 2
 ```
