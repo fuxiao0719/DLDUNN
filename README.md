@@ -13,19 +13,19 @@ This repository contains the code for [Hybrid Precoding Design Based on Dual-Lay
 ```bash
 python pdd.py --cfg_file lib/dldunn.yaml K 2 M 2 N 4 M_RF 2 N_RF 4
 ```
-* Run the DLDUNN model
+* Run the DLDUNN model. For easier verification, if we set K=2, M=2, N=4, M_RF=2, N_RF=4, D_in=4, D_out=2 here, we can achieve PDD's result(16.177bps/Hz) and DLDUNN's result(15.891bps/Hz). These parameters can be manually changed to match the paper.
 ```bash
 python run.py --cfg_file lib/dldunn.yaml K 2 M 2 N 4 M_RF 2 N_RF 4 D_in 4 D_out 2
 ```
-* For easier verification, if we set K=2, M=2, N=4, M_RF=2, N_RF=4, D_in=4, D_out=2 here, we can achieve PDD's result(16.177bps/Hz) and DLDUNN's result(15.891bps/Hz). These parameters can be manually changed to match the paper.
 
 ## Cite
 ```
-@INPROCEEDINGS{9569633,
+@inproceedings{zhang2021hybrid,
+  title={Hybrid Precoding Design Based on Dual-Layer Deep-Unfolding Neural Network},
   author={Zhang, Guangyi and Fu, Xiao and Hu, Qiyu and Cai, Yunlong and Yu, Guanding},
-  booktitle={2021 IEEE 32nd Annual International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC)}, 
-  title={Hybrid Precoding Design Based on Dual-Layer Deep-Unfolding Neural Network}, 
+  booktitle={2021 IEEE 32nd Annual International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC)},
+  pages={678--683},
   year={2021},
-  pages={678-683},
-  doi={10.1109/PIMRC50174.2021.9569633}}
+  organization={IEEE}
+}
 ```
