@@ -22,7 +22,7 @@ This repository contains the code for [Hybrid Precoding Design Based on Dual-Lay
 ```bash
 python pdd.py --cfg_file lib/dldunn.yaml K 3 M 2 N 8 M_RF 2 N_RF 8
 ```
-* Run the DLDUNN model. For easier verification, if we set K=3, M=2, N=8, M_RF=2, N_RF=8, D_in=10, D_out=7 here, we can achieve PDD's result (27.176bps/Hz) and DLDUNN's result (26.630bps/Hz). These parameters can be manually changed to match the paper. 
+* Run the DLDUNN model. For easier verification, if we set K=3, M=2, N=8, M_RF=2, N_RF=8, D_in=10, D_out=7 here, we can achieve PDD's result (27.176bps/Hz) and DLDUNN's result (26.751bps/Hz,～98.4%). These parameters can be manually changed to match the paper. 
 ```bash
 python run.py --cfg_file lib/dldunn.yaml K 3 M 2 N 8 M_RF 2 N_RF 8 D_in 10 D_out 7
 ```
